@@ -10,7 +10,6 @@ bluetooth.onBluetoothConnected(function () {
 })
 bluetooth.onBluetoothDisconnected(function () {
     basic.showIcon(IconNames.No)
-    ServoLite.stop()
 })
 control.onEvent(EventBusSource.MES_DPAD_CONTROLLER_ID, EventBusValue.MICROBIT_EVT_ANY, function () {
     if (control.eventValue() == EventBusValue.MES_DPAD_BUTTON_A_DOWN) {
@@ -43,6 +42,10 @@ control.onEvent(EventBusSource.MES_DPAD_CONTROLLER_ID, EventBusValue.MICROBIT_EV
             # . # # #
             `)
         basic.showArrow(ArrowNames.West)
+    } else if (control.eventValue() == EventBusValue.MES_DPAD_BUTTON_3_UP) {
+    	
+    } else if (control.eventValue() == EventBusValue.MES_DPAD_BUTTON_4_UP) {
+    	
     } else if (control.eventValue() == EventBusValue.MES_DPAD_BUTTON_4_DOWN) {
         for (let index = 0; index < 2; index++) {
             basic.showString("90=50+40")
@@ -50,7 +53,5 @@ control.onEvent(EventBusSource.MES_DPAD_CONTROLLER_ID, EventBusValue.MICROBIT_EV
             break;
 continue;
         }
-    } else if (control.eventValue() == EventBusValue.MES_DPAD_BUTTON_4_UP) {
-        ServoLite.stop()
     }
 })
