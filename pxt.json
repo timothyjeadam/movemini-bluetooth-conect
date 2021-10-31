@@ -3,9 +3,9 @@
     "description": "",
     "dependencies": {
         "core": "*",
-        "bluetooth": "*",
         "pxt-kitronik-motor-driver": "github:kitronikltd/pxt-kitronik-motor-driver#v0.0.3",
-        "microphone": "*"
+        "microphone": "*",
+        "bluetooth": "*"
     },
     "files": [
         "main.blocks",
